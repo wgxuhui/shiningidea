@@ -19,7 +19,7 @@
 <meta property="og:image" content="https:&#x2F;&#x2F;www.zybuluo.com&#x2F;static&#x2F;img&#x2F;toolbar-manager.jpg">
 <meta property="og:image" content="https:&#x2F;&#x2F;www.zybuluo.com&#x2F;static&#x2F;img&#x2F;toolbar-reader.jpg">
 <meta property="og:image" content="https:&#x2F;&#x2F;www.zybuluo.com&#x2F;static&#x2F;img&#x2F;file-list.png">
-<meta property="og:updated_time" content="2019-10-29T11:45:34.876Z">
+<meta property="og:updated_time" content="2019-10-29T12:32:17.043Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;github.com&#x2F;wgxuhui&#x2F;wgxuhui.github.io&#x2F;blob&#x2F;master&#x2F;images&#x2F;Deep%20Hybrid%20Network.jpg?raw=true">
   
@@ -100,7 +100,7 @@
 <li>Seeing Motion in the Dark</li>
 </ul>
 <h3 id="1-Low-Light-Image-Enhancement-via-a-Deep-Hybrid-Network"><a href="#1-Low-Light-Image-Enhancement-via-a-Deep-Hybrid-Network" class="headerlink" title="1. Low-Light Image Enhancement via a Deep Hybrid Network"></a>1. Low-Light Image Enhancement via a Deep Hybrid Network</h3><p><em>Ren W , Liu S , Ma L , et al. Low-Light Image Enhancement via a Deep Hybrid Network[J]. IEEE Transactions on Image Processing, 2019:1-1.</em></p>
-<p>该文章用一种可训练的混合网络来增强在昏暗环境中的图像质量。由于之前采用的方法通常是对于图像的整体特征进行学习，这种方法会漏掉一些细节。因此这篇文章采用了混合网络架构，由两个不同的数据流组成，一个数据流通过编码器-解码器网络学习图像的全局内容，另一个数据流则用于学习图像边缘细节信息。这种方法类似于传统的反锐化掩模方法，即分离图像边缘细节，增强后再与原图像进行融合。<br><img src="https://github.com/wgxuhui/wgxuhui.github.io/blob/master/images/Deep%20Hybrid%20Network.jpg?raw=true" alt="网络结构"></p>
+<p>该文章用一种可训练的混合网络来增强在昏暗环境中的图像质量。由于之前采用的方法通常是对于图像的整体特征进行学习，这种方法会漏掉一些细节。因此这篇文章采用了混合网络架构，由两个不同的数据流组成，一个数据流通过编码器-解码器网络学习图像的全局内容，另一个数据流则用于学习图像边缘细节信息。这种方法类似于传统的反锐化掩模方法，即分离图像边缘细节，增强后再与原图像进行融合。<br><img src="https://github.com/wgxuhui/wgxuhui.github.io/blob/master/images/Deep%20Hybrid%20Network.jpg?raw=true" alt="网络结构"><br>内容流采用了残差网络，并在网络的前两层采用了空洞卷积（dilated convolution）来扩展接收域。在网上查了下空洞卷积的好处，就是可以在“不做pooling损失信息的情况下，加大了感受野，让每个卷积输出都包含较大范围的信息。”当然也有坏处，比如会损失信息的连续性，但是因为这个网络里还有一个边缘流，所以可能这方面就不太重要了吧。另外在上采样阶段，这个残差网络还加入了边缘流的信息，以获得更多的细节。</p>
 <h3 id="Windows-Mac-Linux-全平台客户端"><a href="#Windows-Mac-Linux-全平台客户端" class="headerlink" title="Windows/Mac/Linux 全平台客户端"></a><a href="https://www.zybuluo.com/cmd/" target="_blank" rel="noopener">Windows/Mac/Linux 全平台客户端</a></h3><blockquote>
 <p>请保留此份 Cmd Markdown 的欢迎稿兼使用说明，如需撰写新稿件，点击顶部工具栏右侧的 <i class="icon-file"></i> <strong>新文稿</strong> 或者使用快捷键 <code>Ctrl+Alt+N</code>。</p>
 </blockquote>
@@ -179,7 +179,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/25/first-blog/" data-id="ck2bst3ei00004ovoef3q26it" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/25/first-blog/" data-id="ck2bu0x3o0000fgvobuq5dhgi" class="article-share-link">Share</a>
       
       
     </footer>
