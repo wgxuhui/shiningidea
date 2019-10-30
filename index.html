@@ -94,6 +94,7 @@
 </ul>
 <h3 id="1-Low-Light-Image-Enhancement-via-a-Deep-Hybrid-Network"><a href="#1-Low-Light-Image-Enhancement-via-a-Deep-Hybrid-Network" class="headerlink" title="1. Low-Light Image Enhancement via a Deep Hybrid Network"></a>1. Low-Light Image Enhancement via a Deep Hybrid Network</h3><p><em>Ren W , Liu S , Ma L , et al. Low-Light Image Enhancement via a Deep Hybrid Network[J]. IEEE Transactions on Image Processing, 2019:1-1.</em></p>
 <p>该文章用一种可训练的混合网络来增强在昏暗环境中的图像质量。由于之前采用的方法通常是对于图像的整体特征进行学习，这种方法会漏掉一些细节。因此这篇文章采用了混合网络架构，由两个不同的数据流组成，一个数据流通过编码器-解码器网络学习图像的全局内容，另一个数据流则用于学习图像边缘细节信息。这种方法类似于传统的反锐化掩模方法，即分离图像边缘细节，增强后再与原图像进行融合。<br><img src="https://github.com/wgxuhui/wgxuhui.github.io/blob/master/images/Deep%20Hybrid%20Network.jpg?raw=true" alt="网络结构"><br>内容流采用了残差网络，并在网络的前两层采用了空洞卷积（dilated convolution）来扩展接收域。在网上查了下空洞卷积的好处，就是可以在“不做pooling损失信息的情况下，加大了感受野，让每个卷积输出都包含较大范围的信息。”当然也有坏处，比如会损失信息的连续性，但是因为这个网络里还有一个边缘流，所以可能这方面就不太重要了吧。另外在上采样阶段，这个残差网络还加入了边缘流的信息，以获得更多的细节。<br>边缘流采用的是空间变异RNN（spatially variant RNN），这种方法是2016年在ECCV首次提出，RNN可以模拟一个图像的滤波操作，用DeepCNN训练一个权值p，将隐藏状态转换成当前状态（h[k-1] -&gt; h[k])。但该滤波器是一个归一化的滤波器，也就是增益为1，因此学习出的边缘仍然很黑。所以他们提出了一种改进空间变异RNN，用DeepCNN学习g,p两个参数。$$h[k]=g[k]x[k]+p[k]h[k-1]$$。他们在四个方向上都进行了这种计算。<br><img src="https://github.com/wgxuhui/wgxuhui.github.io/blob/master/images/edge%20stream.png?raw=true" alt="边缘流的网络"><br>损失函数：MSE损失（ MSE loss）、对抗损失（adversarial loss）和感知损失（perceptual loss）。感知损失采用VGG-16，对抗损失采用discriminator。最后再把三个损失函数加起来。<br>数据集：MIT-Adobe FiveK。从5000张图片找到336张低光照图片对，这种低光照指的是在日出或夕阳时的照片。图片加了γ=3的伽马校正和1%的高斯噪声。对比了WVM、LIME、HDRNet、DSLR-Q的方法。看结果，这种方法确实可以在增强图像质量的同时达到比较自然的效果，在PSNR/SSIM方面也有了一定提升。<br>感言时间：总体而言，这篇论文教会我的东西就是让我了解了太多网络，作为一个新手，感觉全世界的方法这文章都用上了，写的肯定很不容易，我看得也十分不易。此外自己加噪声造数据集的方法我觉得十分不可取，让人感觉像做了一个很复杂的模型，但一旦拉出来溜溜搞不好就要露馅。</p>
+<h3 id="2-EnlightenGAN：-Deep-Light-Enhancement-without-Paired-Supervision"><a href="#2-EnlightenGAN：-Deep-Light-Enhancement-without-Paired-Supervision" class="headerlink" title="2. EnlightenGAN： Deep Light Enhancement without Paired Supervision"></a>2. EnlightenGAN： Deep Light Enhancement without Paired Supervision</h3><p><em>Jiang, Y., Gong, X., Liu, D., Cheng, Y., Fang, C., Shen, X., … &amp; Wang, Z. (2019). EnlightenGAN: Deep Light Enhancement without Paired Supervision. arXiv preprint arXiv:1906.06972.</em><br>本文采用无监督学习的对抗生成网络进行图像增强的处理。这篇文章首先提出了以往基于深度学习的图像增强方法的弊端，包括：1)同一视觉场景的败坏图像与地面真值图像(如低光图像对与常光图像对同时捕获)是非常困难的，甚至是不切实际的;2)很多文章从普通图像中合成低光照图像，但这种合成的结果通常不够逼真，导致训练后的模型应用于真实的微光图像时会产生各种伪影;3)在低光图像中可能没有唯一的或定义良好的高光地面真值。针对这些问题，作者采用了GAN网络在低光照图像和正常光图像空间建立非成对映射，而不需要依赖精确成对的图像，使得数据集不必使用合成数据或十分有限的数据量。</p>
 <h3 id="Windows-Mac-Linux-全平台客户端"><a href="#Windows-Mac-Linux-全平台客户端" class="headerlink" title="Windows/Mac/Linux 全平台客户端"></a><a href="https://www.zybuluo.com/cmd/" target="_blank" rel="noopener">Windows/Mac/Linux 全平台客户端</a></h3><blockquote>
 <p>请保留此份 Cmd Markdown 的欢迎稿兼使用说明，如需撰写新稿件，点击顶部工具栏右侧的 <i class="icon-file"></i> <strong>新文稿</strong> 或者使用快捷键 <code>Ctrl+Alt+N</code>。</p>
 </blockquote>
@@ -172,7 +173,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/25/first-blog/" data-id="ck2bvuv7o0001wkvoht9cd7ei" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/25/first-blog/" data-id="ck2d9y4yv0001pgvo05r55abq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -221,7 +222,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/25/hello-world/" data-id="ck2bvuv7i0000wkvoh6ji6br8" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/25/hello-world/" data-id="ck2d9y4vl0000pgvo8w6xcdxb" class="article-share-link">Share</a>
       
       
     </footer>
