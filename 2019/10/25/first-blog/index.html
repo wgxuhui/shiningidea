@@ -17,7 +17,8 @@
 <meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;wgxuhui&#x2F;wgxuhui.github.io&#x2F;blob&#x2F;master&#x2F;images&#x2F;Deep%20Hybrid%20Network.jpg?raw=true">
 <meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;wgxuhui&#x2F;wgxuhui.github.io&#x2F;blob&#x2F;master&#x2F;images&#x2F;edge%20stream.png?raw=true">
 <meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;wgxuhui&#x2F;wgxuhui.github.io&#x2F;blob&#x2F;master&#x2F;images&#x2F;enlightenGan.JPG?raw=true">
-<meta property="og:updated_time" content="2019-10-31T03:03:01.430Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;wgxuhui&#x2F;wgxuhui.github.io&#x2F;blob&#x2F;master&#x2F;images&#x2F;seeing%20motion%20in%20the%20dark.jpg?raw=true">
+<meta property="og:updated_time" content="2019-11-01T05:14:13.782Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;github.com&#x2F;wgxuhui&#x2F;wgxuhui.github.io&#x2F;blob&#x2F;master&#x2F;images&#x2F;Deep%20Hybrid%20Network.jpg?raw=true">
   
@@ -105,13 +106,12 @@
 <p>文章使用的数据集是Berkeley Deep Driving (BBD-100k)，在合成图像上看着这种方法确实很自然，但是在真实的夜景路拍情况下我并没有看出明显的优势。另外文章还把各种方法处理后的图像送入resnet-50分类器，本文方法比其他方法的分类正确率有微小的提升。</p>
 <p>感言时间：这篇文章通过对损失函数的改进摆脱了对groundtruth的依赖，我觉得对于微光图像的增强还是很有意义的。</p>
 <h3 id="3-Seeing-Motion-in-the-Dark"><a href="#3-Seeing-Motion-in-the-Dark" class="headerlink" title="3. Seeing Motion in the Dark"></a>3. Seeing Motion in the Dark</h3><p>该文章的目标是低光照下的视频处理。<br>这篇UIUC和Intel联合发表的论文和他们之前18年的工作（<em>Chen, C., Chen, Q., Xu, J., &amp; Koltun, V. (2018). Learning to see in the dark. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (pp. 3291-3300).</em>）紧密相连。在18年的文章里，作者为了研究在低级光照下的图像质量增强，提出了一种端到端训练模式的全卷积网络FCN ，用于处理低亮度图像。引入了一个数据集，包含有原始的低曝光率、低亮度图片，同时还有对应的长曝光率图像。方法能够有效地抑制图像噪声，生成色彩均衡、逼真的图像。</p>
-<p>在19年的这篇文章里，他们如法炮制，开始研究视频的图像增强。他们又采集了一个视频数据集，包括静态和动态两部分，静态数据集会采集对应的groundtruth长曝光数据用于训练，而动态视频作为测试集，且没有相应groundtruth，他们认为模型有能力从静态泛化到动态视频上。数据是原始raw视频，首先经过了比较复杂的预处理，然后送入神经网络。网络模型采用的是ResU-Net的结构，提出了重建损失和自一致性损失。其中重建损失是约束output与groundtruth之间的距离，自一致性损失是为了确保时序一致性。结论就是他们的模型确实可以在动态视频上达到比较好的效果。但是模型也并不是完美，比如会在午夜的月光视频中失效（虽然我不理解是为啥），另外就是他们的视频动态范围不高，其实算是降低了难度。</p>
-<p>感言时间：这个工作让人感觉做深度学习真简单，只要拍点照片、视频就好了，做底层图像处理连人工打标签的工作都省了。不过我不能说这个工作没有意义，恰恰相反其实比那些复杂的网络有意义多了，至少给我们提供了很好用的数据集。</p>
+<p>在19年的这篇文章里，他们如法炮制，开始研究视频的图像增强。他们又采集了一个视频数据集，包括静态和动态两部分，静态数据集会采集对应的groundtruth长曝光数据用于训练，而动态视频作为测试集，且没有相应groundtruth，他们认为模型有能力从静态泛化到动态视频上。数据是原始raw视频，首先经过了比较复杂的预处理，然后送入神经网络。网络模型采用的是ResU-Net的结构，提出了重建损失和自一致性损失。其中重建损失是约束output与groundtruth之间的距离，自一致性损失是为了确保时序一致性。结论就是他们的模型确实可以在动态视频上达到比较好的效果。但是模型也并不是完美，比如会在午夜的月光视频中失效（虽然我不理解是为啥），另外就是他们的视频动态范围不高，其实算是降低了难度。<br><img src="https://github.com/wgxuhui/wgxuhui.github.io/blob/master/images/seeing%20motion%20in%20the%20dark.jpg?raw=true" alt="网络结构"><br>感言时间：这个工作让人感觉做深度学习真简单，只要拍点照片、视频就好了，做底层图像处理连人工打标签的工作都省了。不过我不能说这个工作没有意义，恰恰相反其实比那些复杂的网络有意义多了，至少给我们提供了很好用的数据集。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/25/first-blog/" data-id="ck2foimhz0000zovo34d3asye" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/25/first-blog/" data-id="ck2fonudo000064vo40hy6u87" class="article-share-link">Share</a>
       
       
     </footer>
