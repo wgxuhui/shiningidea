@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-11-05T04:07:33.047Z</updated>
+  <updated>2019-11-06T01:24:59.206Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ICCV2019文献整理1</title>
+    <link href="http://yoursite.com/2019/11/06/first-blog%20-%20%E5%89%AF%E6%9C%AC/"/>
+    <id>http://yoursite.com/2019/11/06/first-blog - 副本/</id>
+    <published>2019-11-06T01:05:12.000Z</published>
+    <updated>2019-11-06T01:24:59.206Z</updated>
+    
+    <content type="html"><![CDATA[<hr><blockquote></blockquote><ul><li>Asynchronous Single-Photon 3D Imaging</li></ul><h3 id="1-Asynchronous-Single-Photon-3D-Imaging"><a href="#1-Asynchronous-Single-Photon-3D-Imaging" class="headerlink" title="1. Asynchronous Single-Photon 3D Imaging"></a>1. Asynchronous Single-Photon 3D Imaging</h3><p><em>Gupta A, Ingle A, Gupta M. Asynchronous Single-Photon 3D Imaging[C]//Proceedings of the IEEE International Conference on Computer Vision. 2019: 7909-7918.</em><br>这篇文章是Best Paper Honorable Mentions，但讲的东西么真的是很神奇。SPAD-单光子雪崩二极管，可以记录单个光子的到达时间，所以一般用飞行时间法去进行3D成像。虽然我没用过，但我上网搜了一下，貌似不是个全新的东西，国外已经有了商业化的产品。这篇文章讲的是怎样在有自然光的情况下使用SPAD，主要就是用了平移窗口进行收集，然后将峰值对齐之后，再把相当于本底噪声的自然光减掉。在外行看来这玩意好像并不高深，不知道是哪一点打动了评委得了最佳荣誉论文奖，有没有大神能科普下。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;hr&gt;
+&lt;blockquote&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Asynchronous Single-Photon 3D Imaging&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;1-Asynchronous-Single-Photon-3D-Imaging&quot;&gt;&lt;
+      
+    
+    </summary>
+    
+    
+    
+      <category term="文献整理" scheme="http://yoursite.com/tags/%E6%96%87%E7%8C%AE%E6%95%B4%E7%90%86/"/>
+    
+      <category term="SPAD" scheme="http://yoursite.com/tags/SPAD/"/>
+    
+  </entry>
   
   <entry>
     <title>低光照图像增强文献整理2019.10</title>
