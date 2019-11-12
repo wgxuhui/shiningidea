@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-11-06T01:30:47.661Z</updated>
+  <updated>2019-11-12T02:00:14.247Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://yoursite.com/2019/11/06/ICCV2019-1/"/>
     <id>http://yoursite.com/2019/11/06/ICCV2019-1/</id>
     <published>2019-11-06T01:05:12.000Z</published>
-    <updated>2019-11-06T01:30:47.661Z</updated>
+    <updated>2019-11-12T02:00:14.247Z</updated>
     
-    <content type="html"><![CDATA[<hr><blockquote></blockquote><ul><li>Asynchronous Single-Photon 3D Imaging</li></ul><h3 id="1-Asynchronous-Single-Photon-3D-Imaging"><a href="#1-Asynchronous-Single-Photon-3D-Imaging" class="headerlink" title="1. Asynchronous Single-Photon 3D Imaging"></a>1. Asynchronous Single-Photon 3D Imaging</h3><p><em>Gupta A, Ingle A, Gupta M. Asynchronous Single-Photon 3D Imaging[C]//Proceedings of the IEEE International Conference on Computer Vision. 2019: 7909-7918.</em><br>这篇文章是Best Paper Honorable Mentions，但讲的东西么真的是很神奇。SPAD-单光子雪崩二极管，可以记录单个光子的到达时间，所以一般用飞行时间法去进行3D成像。虽然我没用过，但我上网搜了一下，貌似不是个全新的东西，国外已经有了商业化的产品。这篇文章讲的是怎样在有自然光的情况下使用SPAD，主要就是用了平移窗口进行收集，然后将峰值对齐之后，再把相当于本底噪声的自然光减掉。在外行看来这玩意好像并不高深，当然外行看得并不太懂，不知道是哪一点打动了评委得了最佳荣誉论文奖，有没有大神能科普下。<br><img src="https://github.com/wgxuhui/wgxuhui.github.io/blob/master/images/SPAD.JPG?raw=true" alt="Imaging model of single-photon 3D cameras"></p>]]></content>
+    <content type="html"><![CDATA[<hr><blockquote></blockquote><ul><li>Asynchronous Single-Photon 3D Imaging</li><li>Real Image Denoising with Feature Attention</li></ul><h3 id="1-Asynchronous-Single-Photon-3D-Imaging"><a href="#1-Asynchronous-Single-Photon-3D-Imaging" class="headerlink" title="1. Asynchronous Single-Photon 3D Imaging"></a>1. Asynchronous Single-Photon 3D Imaging</h3><p><em>Gupta A, Ingle A, Gupta M. Asynchronous Single-Photon 3D Imaging[C]//Proceedings of the IEEE International Conference on Computer Vision. 2019: 7909-7918.</em><br>这篇文章是Best Paper Honorable Mentions，但讲的东西么真的是很神奇。SPAD-单光子雪崩二极管，可以记录单个光子的到达时间，所以一般用飞行时间法去进行3D成像。虽然我没用过，但我上网搜了一下，貌似不是个全新的东西，国外已经有了商业化的产品。这篇文章讲的是怎样在有自然光的情况下使用SPAD，主要就是用了平移窗口进行收集，然后将峰值对齐之后，再把相当于本底噪声的自然光减掉。在外行看来这玩意好像并不高深，当然外行看得并不太懂，不知道是哪一点打动了评委得了最佳荣誉论文奖，有没有大神能科普下。<br><img src="https://github.com/wgxuhui/wgxuhui.github.io/blob/master/images/SPAD.JPG?raw=true" alt="Imaging model of single-photon 3D cameras"></p><h3 id="2-Real-Image-Denoising-with-Feature-Attention"><a href="#2-Real-Image-Denoising-with-Feature-Attention" class="headerlink" title="2. Real Image Denoising with Feature Attention"></a>2. Real Image Denoising with Feature Attention</h3><p><em>Anwar S, Barnes N. Real Image Denoising with Feature Attention[J]. arXiv preprint arXiv:1904.07396, 2019.</em><br>这篇文章主要是采用了很深的CNN和跳过链接组成的神经网络，解决常规的神经网络中合成数据去噪效果好但真实数据去燥效果不好的问题。主要贡献：1.他们的模型是第一个在去噪中加入特征注意的模型。2.模块化网络提升性能。3.合成数据集合真实数据集上都有较好的效果。<br>模型由特征提取、残差模块上的特征学习、残差重构三个主要模块组成。<br>网络结构：1. f_{0} = M_{e}(x) 单层卷积提取初始特征得到 f_{0}，2. f_{r} = M_{fl}(f_{0})学习残差模块EAM上的残差分量，网络深度很小，但提供了广泛的接收域，3. \hat{y} = M_{r}(f_{r})。损失函数就是简单地加权平均。</p>]]></content>
     
     <summary type="html">
     
@@ -34,8 +34,8 @@
 &lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;Asynchronous Single-Photon 3D Imaging&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;1-Asynchronous-Single-Photon-3D-Imaging&quot;&gt;&lt;
+&lt;li&gt;Real Image Denoising with Feature Attention&lt;/li&gt;
+&lt;/u
       
     
     </summary>
