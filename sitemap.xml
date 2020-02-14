@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2020/02/10/ICCV2019-2/</loc>
+    
+    <lastmod>2020-02-14T09:41:41.505Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2019/10/25/first-blog/</loc>
     
     <lastmod>2020-02-14T09:35:47.063Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://yoursite.com/2019/11/06/ICCV2019-1/</loc>
     
     <lastmod>2020-02-14T09:18:10.107Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2020/02/10/ICCV2019-2/</loc>
-    
-    <lastmod>2020-02-10T13:04:51.430Z</lastmod>
     
   </url>
   
