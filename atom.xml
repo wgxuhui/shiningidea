@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-02-16T05:24:30.643Z</updated>
+  <updated>2020-04-07T01:00:44.899Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>TensorFlow安装</title>
+    <link href="http://yoursite.com/2020/03/19/tensorflow-setup/"/>
+    <id>http://yoursite.com/2020/03/19/tensorflow-setup/</id>
+    <published>2020-03-19T03:05:00.000Z</published>
+    <updated>2020-04-07T01:00:44.899Z</updated>
+    
+    <content type="html"><![CDATA[<hr><blockquote></blockquote><p>由于每次想用的时候都发现忘了，需要重新查资料真的很麻烦，就自己把安装过程记录一下吧。大部分参考CSDN的博客。图是自己运行的图，安装平台Ubuntu16.04。</p><h4 id="安装Anaconda"><a href="#安装Anaconda" class="headerlink" title="安装Anaconda"></a>安装Anaconda</h4><p>首先在<a href="https://www.anaconda.com/download/#linux" target="_blank" rel="noopener">官网</a>上下载软件。<br>进入安装包所在目录，执行命令：</p><figure class="highlight bash"><figcaption><span>Anaconda3-5.0.1-Linux-x86_64.sh</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">一路回车——yes——输入安装位置——yes</span><br><span class="line">让。bashrc中的路径生效</span><br><span class="line">```<span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure><h4 id="安装tensorflow"><a href="#安装tensorflow" class="headerlink" title="安装tensorflow"></a>安装tensorflow</h4><p>首先创建虚拟环境</p><figure class="highlight plain"><figcaption><span>create -n tf</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">````</span><br><span class="line">![创建虚拟环境][image1]</span><br><span class="line">进入虚拟环境</span><br><span class="line">````source activate tf</span><br></pre></td></tr></table></figure><p>安装tenserflow</p><figure class="highlight plain"><figcaption><span>install tensorflow-gpu</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">````</span><br><span class="line">在python下导入tensorflow试试：(不报错就是成功)</span><br><span class="line">![导入tensorflow][image2]</span><br><span class="line"></span><br><span class="line">退出Python：Ctrl+d</span><br><span class="line">退出虚拟环境</span><br><span class="line">````deactivate tf</span><br></pre></td></tr></table></figure><p>感觉还真是挺简单- -</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;hr&gt;
+&lt;blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;由于每次想用的时候都发现忘了，需要重新查资料真的很麻烦，就自己把安装过程记录一下吧。大部分参考CSDN的博客。图是自己运行的图，安装平台Ubuntu16.04。&lt;/p&gt;
+&lt;h4 id=&quot;安装Anaconda&quot;&gt;
+      
+    
+    </summary>
+    
+    
+    
+      <category term="实操" scheme="http://yoursite.com/tags/%E5%AE%9E%E6%93%8D/"/>
+    
+      <category term="tensorflow" scheme="http://yoursite.com/tags/tensorflow/"/>
+    
+      <category term="转载" scheme="http://yoursite.com/tags/%E8%BD%AC%E8%BD%BD/"/>
+    
+  </entry>
   
   <entry>
     <title>图像去噪相关论文</title>

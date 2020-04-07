@@ -65,6 +65,55 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-tensorflow-setup" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/03/19/tensorflow-setup/" class="article-date">
+  <time datetime="2020-03-19T03:05:00.000Z" itemprop="datePublished">2020-03-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/19/tensorflow-setup/">TensorFlow安装</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<blockquote>
+</blockquote>
+<p>由于每次想用的时候都发现忘了，需要重新查资料真的很麻烦，就自己把安装过程记录一下吧。大部分参考CSDN的博客。图是自己运行的图，安装平台Ubuntu16.04。</p>
+<h4 id="安装Anaconda"><a href="#安装Anaconda" class="headerlink" title="安装Anaconda"></a>安装Anaconda</h4><p>首先在<a href="https://www.anaconda.com/download/#linux" target="_blank" rel="noopener">官网</a>上下载软件。<br>进入安装包所在目录，执行命令：</p>
+<figure class="highlight bash"><figcaption><span>Anaconda3-5.0.1-Linux-x86_64.sh</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">一路回车——yes——输入安装位置——yes</span><br><span class="line">让。bashrc中的路径生效</span><br><span class="line">```<span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure>
+<h4 id="安装tensorflow"><a href="#安装tensorflow" class="headerlink" title="安装tensorflow"></a>安装tensorflow</h4><p>首先创建虚拟环境</p>
+<figure class="highlight plain"><figcaption><span>create -n tf</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">````</span><br><span class="line">![创建虚拟环境][image1]</span><br><span class="line">进入虚拟环境</span><br><span class="line">````source activate tf</span><br></pre></td></tr></table></figure>
+<p>安装tenserflow</p>
+<figure class="highlight plain"><figcaption><span>install tensorflow-gpu</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">````</span><br><span class="line">在python下导入tensorflow试试：(不报错就是成功)</span><br><span class="line">![导入tensorflow][image2]</span><br><span class="line"></span><br><span class="line">退出Python：Ctrl+d</span><br><span class="line">退出虚拟环境</span><br><span class="line">````deactivate tf</span><br></pre></td></tr></table></figure>
+<p>感觉还真是挺简单- -</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/03/19/tensorflow-setup/" data-id="ck8p76m2r00005ovobwcx2ji0" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tensorflow/" rel="tag">tensorflow</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AE%9E%E6%93%8D/" rel="tag">实操</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%BD%AC%E8%BD%BD/" rel="tag">转载</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-denoising" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/02/16/denoising/" class="article-date">
@@ -285,7 +334,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/SPAD/" rel="tag">SPAD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BD%8E%E5%85%89%E7%85%A7%E5%A2%9E%E5%BC%BA/" rel="tag">低光照增强</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%99%AA%E5%A3%B0%E5%90%88%E6%88%90/" rel="tag">噪声合成</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%BE%E5%83%8F%E5%8E%BB%E5%99%AA/" rel="tag">图像去噪</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BE%AE%E5%85%89%E5%A2%9E%E5%BC%BA/" rel="tag">微光增强</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%96%87%E7%8C%AE%E6%95%B4%E7%90%86/" rel="tag">文献整理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%B6%85%E5%88%86%E8%BE%A8%E7%8E%87%E6%81%A2%E5%A4%8D/" rel="tag">超分辨率恢复</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/SPAD/" rel="tag">SPAD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tensorflow/" rel="tag">tensorflow</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BD%8E%E5%85%89%E7%85%A7%E5%A2%9E%E5%BC%BA/" rel="tag">低光照增强</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%99%AA%E5%A3%B0%E5%90%88%E6%88%90/" rel="tag">噪声合成</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%BE%E5%83%8F%E5%8E%BB%E5%99%AA/" rel="tag">图像去噪</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%9E%E6%93%8D/" rel="tag">实操</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BE%AE%E5%85%89%E5%A2%9E%E5%BC%BA/" rel="tag">微光增强</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%96%87%E7%8C%AE%E6%95%B4%E7%90%86/" rel="tag">文献整理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%B6%85%E5%88%86%E8%BE%A8%E7%8E%87%E6%81%A2%E5%A4%8D/" rel="tag">超分辨率恢复</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BD%AC%E8%BD%BD/" rel="tag">转载</a></li></ul>
     </div>
   </div>
 
@@ -295,7 +344,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/SPAD/" style="font-size: 10px;">SPAD</a> <a href="/tags/%E4%BD%8E%E5%85%89%E7%85%A7%E5%A2%9E%E5%BC%BA/" style="font-size: 10px;">低光照增强</a> <a href="/tags/%E5%99%AA%E5%A3%B0%E5%90%88%E6%88%90/" style="font-size: 10px;">噪声合成</a> <a href="/tags/%E5%9B%BE%E5%83%8F%E5%8E%BB%E5%99%AA/" style="font-size: 20px;">图像去噪</a> <a href="/tags/%E5%BE%AE%E5%85%89%E5%A2%9E%E5%BC%BA/" style="font-size: 10px;">微光增强</a> <a href="/tags/%E6%96%87%E7%8C%AE%E6%95%B4%E7%90%86/" style="font-size: 20px;">文献整理</a> <a href="/tags/%E8%B6%85%E5%88%86%E8%BE%A8%E7%8E%87%E6%81%A2%E5%A4%8D/" style="font-size: 10px;">超分辨率恢复</a>
+      <a href="/tags/SPAD/" style="font-size: 10px;">SPAD</a> <a href="/tags/tensorflow/" style="font-size: 10px;">tensorflow</a> <a href="/tags/%E4%BD%8E%E5%85%89%E7%85%A7%E5%A2%9E%E5%BC%BA/" style="font-size: 10px;">低光照增强</a> <a href="/tags/%E5%99%AA%E5%A3%B0%E5%90%88%E6%88%90/" style="font-size: 10px;">噪声合成</a> <a href="/tags/%E5%9B%BE%E5%83%8F%E5%8E%BB%E5%99%AA/" style="font-size: 20px;">图像去噪</a> <a href="/tags/%E5%AE%9E%E6%93%8D/" style="font-size: 10px;">实操</a> <a href="/tags/%E5%BE%AE%E5%85%89%E5%A2%9E%E5%BC%BA/" style="font-size: 10px;">微光增强</a> <a href="/tags/%E6%96%87%E7%8C%AE%E6%95%B4%E7%90%86/" style="font-size: 20px;">文献整理</a> <a href="/tags/%E8%B6%85%E5%88%86%E8%BE%A8%E7%8E%87%E6%81%A2%E5%A4%8D/" style="font-size: 10px;">超分辨率恢复</a> <a href="/tags/%E8%BD%AC%E8%BD%BD/" style="font-size: 10px;">转载</a>
     </div>
   </div>
 
@@ -304,7 +353,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li></ul>
     </div>
   </div>
 
@@ -315,6 +364,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/03/19/tensorflow-setup/">TensorFlow安装</a>
+          </li>
         
           <li>
             <a href="/2020/02/16/denoising/">图像去噪相关论文</a>

@@ -5,13 +5,17 @@
   
 
   
-  <title>Archives: 2019/10 | Her Technical Blog</title>
+  <title>TensorFlow安装 | Her Technical Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Her Technical Blog">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;archives&#x2F;2019&#x2F;10&#x2F;index.html">
+  <meta name="description" content="由于每次想用的时候都发现忘了，需要重新查资料真的很麻烦，就自己把安装过程记录一下吧。大部分参考CSDN的博客。图是自己运行的图，安装平台Ubuntu16.04。 安装Anaconda首先在官网上下载软件。进入安装包所在目录，执行命令： Anaconda3-5.0.1-Linux-x86_64.sh1234```一路回车——yes——输入安装位置——yes让。bashrc中的路径生效```so">
+<meta name="keywords" content="实操,tensorflow,转载">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TensorFlow安装">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;03&#x2F;19&#x2F;tensorflow-setup&#x2F;index.html">
 <meta property="og:site_name" content="Her Technical Blog">
+<meta property="og:description" content="由于每次想用的时候都发现忘了，需要重新查资料真的很麻烦，就自己把安装过程记录一下吧。大部分参考CSDN的博客。图是自己运行的图，安装平台Ubuntu16.04。 安装Anaconda首先在官网上下载软件。进入安装包所在目录，执行命令： Anaconda3-5.0.1-Linux-x86_64.sh1234```一路回车——yes——输入安装位置——yes让。bashrc中的路径生效```so">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-04-07T01:00:44.899Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Her Technical Blog" type="application/atom+xml">
@@ -63,40 +67,64 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/10/25/first-blog/" class="archive-article-date">
-  <time datetime="2019-10-25T08:54:12.000Z" itemprop="datePublished">Oct 25</time>
+        <section id="main"><article id="post-tensorflow-setup" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/03/19/tensorflow-setup/" class="article-date">
+  <time datetime="2020-03-19T03:05:00.000Z" itemprop="datePublished">2020-03-19</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/25/first-blog/">低光照图像增强文献整理2019.10</a>
+    <h1 class="article-title" itemprop="name">
+      TensorFlow安装
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<blockquote>
+</blockquote>
+<p>由于每次想用的时候都发现忘了，需要重新查资料真的很麻烦，就自己把安装过程记录一下吧。大部分参考CSDN的博客。图是自己运行的图，安装平台Ubuntu16.04。</p>
+<h4 id="安装Anaconda"><a href="#安装Anaconda" class="headerlink" title="安装Anaconda"></a>安装Anaconda</h4><p>首先在<a href="https://www.anaconda.com/download/#linux" target="_blank" rel="noopener">官网</a>上下载软件。<br>进入安装包所在目录，执行命令：</p>
+<figure class="highlight bash"><figcaption><span>Anaconda3-5.0.1-Linux-x86_64.sh</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">一路回车——yes——输入安装位置——yes</span><br><span class="line">让。bashrc中的路径生效</span><br><span class="line">```<span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure>
+<h4 id="安装tensorflow"><a href="#安装tensorflow" class="headerlink" title="安装tensorflow"></a>安装tensorflow</h4><p>首先创建虚拟环境</p>
+<figure class="highlight plain"><figcaption><span>create -n tf</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">````</span><br><span class="line">![创建虚拟环境][image1]</span><br><span class="line">进入虚拟环境</span><br><span class="line">````source activate tf</span><br></pre></td></tr></table></figure>
+<p>安装tenserflow</p>
+<figure class="highlight plain"><figcaption><span>install tensorflow-gpu</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">````</span><br><span class="line">在python下导入tensorflow试试：(不报错就是成功)</span><br><span class="line">![导入tensorflow][image2]</span><br><span class="line"></span><br><span class="line">退出Python：Ctrl+d</span><br><span class="line">退出虚拟环境</span><br><span class="line">````deactivate tf</span><br></pre></td></tr></table></figure>
+<p>感觉还真是挺简单- -</p>
 
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/03/19/tensorflow-setup/" data-id="ck8p76m2r00005ovobwcx2ji0" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tensorflow/" rel="tag">tensorflow</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AE%9E%E6%93%8D/" rel="tag">实操</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%BD%AC%E8%BD%BD/" rel="tag">转载</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/02/16/denoising/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">图像去噪相关论文</div>
+    </a>
+  
+</nav>
+
+  
+</article>
 
 </section>
         
