@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2020/02/16/denoising/</loc>
+    
+    <lastmod>2020-04-14T07:08:15.043Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2020/03/19/tensorflow-setup/</loc>
     
     <lastmod>2020-04-07T01:08:22.780Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://yoursite.com/2020/02/10/ICCV2019-2/</loc>
     
     <lastmod>2020-03-13T06:38:07.350Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2020/02/16/denoising/</loc>
-    
-    <lastmod>2020-02-16T05:24:30.643Z</lastmod>
     
   </url>
   
