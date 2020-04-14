@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-04-07T01:08:22.780Z</updated>
+  <updated>2020-04-14T07:20:54.584Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>保存一些需要用到的网站</title>
+    <link href="http://yoursite.com/2020/04/14/websites/"/>
+    <id>http://yoursite.com/2020/04/14/websites/</id>
+    <published>2020-04-14T07:16:00.000Z</published>
+    <updated>2020-04-14T07:20:54.584Z</updated>
+    
+    <content type="html"><![CDATA[<hr><blockquote></blockquote><h3 id="Hexo-GitHub搭建博客"><a href="#Hexo-GitHub搭建博客" class="headerlink" title="Hexo + GitHub搭建博客"></a>Hexo + GitHub搭建博客</h3><p><a href="https://www.jianshu.com/p/39562a0d8eb6" target="_blank" rel="noopener">简书里</a>的这篇是感觉最全的，有忘记的会来查一查。</p><h3 id="LaTeX公式编辑器"><a href="#LaTeX公式编辑器" class="headerlink" title="LaTeX公式编辑器"></a>LaTeX公式编辑器</h3><p><a href="https://www.codecogs.com/latex/eqneditor.php" target="_blank" rel="noopener">LaTeX公式编辑器</a>是用来在blog里插入公式的。</p><h3 id="在线图片转码"><a href="#在线图片转码" class="headerlink" title="在线图片转码"></a>在线图片转码</h3><p><a href="http://www.bejson.com/ui/image2base64/" target="_blank" rel="noopener">在线转码</a>是用来在blog里插入图片的，这样就不用图床了，不担心有一天自己的图无法打开。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;hr&gt;
+&lt;blockquote&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;Hexo-GitHub搭建博客&quot;&gt;&lt;a href=&quot;#Hexo-GitHub搭建博客&quot; class=&quot;headerlink&quot; title=&quot;Hexo + GitHub搭建博客&quot;&gt;&lt;/a&gt;Hexo + 
+      
+    
+    </summary>
+    
+    
+    
+      <category term="实操" scheme="http://yoursite.com/tags/%E5%AE%9E%E6%93%8D/"/>
+    
+      <category term="转载" scheme="http://yoursite.com/tags/%E8%BD%AC%E8%BD%BD/"/>
+    
+      <category term="博客" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>TensorFlow安装</title>
