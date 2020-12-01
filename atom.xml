@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-09-02T10:26:43.419Z</updated>
+  <updated>2020-12-01T09:38:24.220Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,37 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>小波变换原理及实现</title>
-    <link href="http://yoursite.com/2020/09/03/wavelet/"/>
-    <id>http://yoursite.com/2020/09/03/wavelet/</id>
-    <published>2020-09-03T10:16:00.000Z</published>
-    <updated>2020-09-02T10:26:43.419Z</updated>
-    
-    <content type="html"><![CDATA[<hr><blockquote></blockquote><p>首先声明这是一篇转载的<a href="https://me.csdn.net/v_hyx" target="_blank" rel="noopener">文章</a>，为了更好地理解和记住我把它放到自己的博客上来。<br>研究小波的底层实现已经好几天了，教材上写的是玄之又玄的公式推导，MATLAB的实现代码好复杂也看的不是很懂，网络上多是一知半解的讲解，看一些文章又把这些关键的实现细节隐藏着。看似教程满天飞，其实能真正有营养的少之又少，还需要自己花大量时间仔细甄别。所以上面的链接是我目前看到写的最清楚的，赶紧搬运过来。</p><h4 id="Mallat算法"><a href="#Mallat算法" class="headerlink" title="Mallat算法"></a>Mallat算法</h4><p><a href="https://www.jianshu.com/p/39562a0d8eb6" target="_blank" rel="noopener">简书里</a>的这篇是感觉最全的，有忘记的会来查一查。</p><h4 id="DWT算法"><a href="#DWT算法" class="headerlink" title="DWT算法"></a>DWT算法</h4><p><a href="https://www.codecogs.com/latex/eqneditor.php" target="_blank" rel="noopener">LaTeX公式编辑器</a>是用来在blog里插入公式的。</p><h4 id="SWT算法"><a href="#SWT算法" class="headerlink" title="SWT算法"></a>SWT算法</h4><p><a href="http://www.bejson.com/ui/image2base64/" target="_blank" rel="noopener">在线转码</a>是用来在blog里插入图片的，这样就不用图床了，不担心有一天自己的图无法打开。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;hr&gt;
-&lt;blockquote&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;首先声明这是一篇转载的&lt;a href=&quot;https://me.csdn.net/v_hyx&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;文章&lt;/a&gt;，为了更好地理解和记住我把它放到自己的博客
-      
-    
-    </summary>
-    
-    
-    
-      <category term="mallat" scheme="http://yoursite.com/tags/mallat/"/>
-    
-      <category term="dwt" scheme="http://yoursite.com/tags/dwt/"/>
-    
-      <category term="swt" scheme="http://yoursite.com/tags/swt/"/>
-    
-  </entry>
   
   <entry>
     <title>TCSVT上的几篇关于小波和硬件实现的文章</title>
